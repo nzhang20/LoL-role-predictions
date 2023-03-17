@@ -62,6 +62,12 @@ As we are basing this prediction model off of similar data used in a previous [p
 
 
 ## Baseline Model
+For our baseline model, we used a random forest classifier to predict the position based on three features: KDA, total damage to champions, and total gold. All of these features are quantitative variables, and KDA is derived from the combination of kills, deaths, and assists. No additional transformations or encodings were performed on these variables.
+
+The performance of the model is reported as 0.4588, which shows that the model correctly predicts the position for 45.88% of the observations. This accuracy level is relatively low, and there is certainly room for improvement.
+
+It is difficult to say definitively whether the current model is "good" or not without additional context. However, given that the model's accuracy is below 50%, it is safe to say that there is significant room for improvement. The model's performance can be improved by including additional relevant features or optimizing the parameters of the random forest classifier.
+
 
 ## Final Model
 
