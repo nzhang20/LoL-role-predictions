@@ -57,8 +57,9 @@ As we are basing this prediction model off of similar data used in a previous [p
 
 
 ## Framing the Problem: Problem Identification
-- Prediction problem: Can we predict a player's role based off of their in-game statistics?
-    - This prediction problem requires building a multiclass classification model
+**Prediction problem:** Can we predict a player’s role based off of their in-game statistics?
+
+This prediction problem requires building a multiclass classification model, and uses `position` as the response variable (`position` can either be middle, top, bottom, jungle, or support). In our previous project, we explored the relationship between `position` and other variables such as `kills`, `assists`, `deaths`, `damagetochampions`, `totalgold`, etc. Since we found there is some indication of correlation between these variables and position, we were interested in exploring the possibility of using those variables to predict players’ positions.
 
 
 ## Baseline Model
