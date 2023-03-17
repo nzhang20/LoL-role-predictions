@@ -57,9 +57,16 @@ As we are basing this prediction model off of similar data used in a previous [p
 
 
 ## Framing the Problem: Problem Identification
-**Prediction problem:** Can we predict a player’s role based off of their in-game statistics?
+**Prediction problem:** Can we predict a player’s role based on their in-game statistics?
 
-This prediction problem requires building a multiclass classification model, and uses `position` as the response variable (`position` can either be middle, top, bottom, jungle, or support). In our previous project, we explored the relationship between `position` and other variables such as `kills`, `assists`, `deaths`, `damagetochampions`, `totalgold`, etc. Since we found there is some indication of correlation between these variables and position, we were interested in exploring the possibility of using those variables to predict players’ positions.
+This prediction problem requires building a multiclass classification model to classify players into one of five positions: middle, top, bottom, jungle, or support. In our case, `position` acts as the response variable as it is an essential variable in team composition and game strategy.
+
+In a previous project, we explored the relationship between `position` and other variables such as `kills`, `assists`, `deaths`, `damagetochampions`, `totalgold`, etc. Since we found there is some indication of correlation between these variables and `position`, we were interested in exploring the possibility of using those variables to predict players’ positions.  
+
+To evaluate our model, we will use the precision metric. Precision helps to minimize the number of false positives, and by using this metric, it would help to ensure a higher accuracy when the model is producing predictions. 
+
+At the "time of prediction," we would only have access to the in-game statistics of a player, which would be used to predict their position. We will train the model using only these features, making sure to exclode any information that would not be available at the "time of prediction."
+
 
 
 ## Baseline Model
