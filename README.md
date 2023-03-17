@@ -24,7 +24,7 @@ Welcome to Summoner’s Rift! [League of Legends (LoL)](https://en.wikipedia.org
 
 Two teams, consisting of five players each, battle to destroy the opposing team's center base known as the Nexus. Each team's players fulfill a specific role on the team—selecting to play one of the five roles: top, jungle, middle, bottom, or support. As a continuation from our first project(https://charissehao.github.io/LoL-role-impact/), we decided to see if we could create a model that predicts which role someone picked based off of their game performance.
 
-The dataset we used to conduct this analysis is the [2022 League of Legends Esports Stats dataset](https://drive.google.com/file/d/1EHmptHyzY8owv0BAcNKtkQpMwfkURwRy/view?usp=sharing) provided by Oracle's Elixir, a website that provides advanced statistics and analysis tools for the game. This dataset contains a comprehensive collection of data from professional League of Legends matches, including detailed information on player and team performance, game events, and match outcomes. The dataset contains information on thousands of matches, covering various tournaments and competitions.
+The dataset we used to build our model is the [2022 League of Legends Esports Stats dataset](https://drive.google.com/file/d/1EHmptHyzY8owv0BAcNKtkQpMwfkURwRy/view?usp=sharing) provided by Oracle's Elixir, a website that provides advanced statistics and analysis tools for the game. This dataset contains a comprehensive collection of data from professional League of Legends matches, including detailed information on player and team performance, game events, and match outcomes. The dataset contains information on thousands of matches, covering various tournaments and competitions.
 
 ### Dataset Statistics and Definitions:
 The dataset has a total of 149,232 rows and 123 columns. We cleaned the dataset to only include the data we needed for our analysis, so our dataframe consisted of 106,170 rows and 13 columns. Below are the definitions of the columns we used from this dataset.
@@ -62,6 +62,7 @@ The dataset has a total of 149,232 rows and 123 columns. We cleaned the dataset 
 
 
 ## Framing the Problem: Problem Identification
+
 
 ## Baseline Model
 
