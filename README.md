@@ -65,7 +65,7 @@ In a previous project, we explored the relationship between `position` and other
 
 To evaluate our model, we will use the precision metric. Precision helps to minimize the number of false positives, and by using this metric, it would help to ensure a higher accuracy when the model is producing predictions. 
 
-At the "time of prediction," we would only have access to the in-game statistics of a player, which would be used to predict their position. We will train the model using only these features, making sure to exclode any information that would not be available at the "time of prediction."
+At the "time of prediction," we would only have access to the in-game statistics of a player, which would be used to predict their position. We will train the model using only these features, making sure to exclude any information that would not be available at the "time of prediction."
 
 
 
