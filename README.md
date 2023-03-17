@@ -1,7 +1,23 @@
+
 # LoL-role-predictions
 A project for DSC80 at UCSD predicting the role of League of Legends players based on their statistics.
 
 Contributors: [Charisse Hao](https://www.linkedin.com/in/charisse-hao/) and [Nicole Zhang](https://www.linkedin.com/in/nicole-zhang-31a09122b/)
+
+
+## Table of Contents
+- [Introduction](#introduction)
+    - [Dataset Statistics and Definitions](#dataset-statistics-and-definitions)
+- [Cleaning and EDA (Exploratory Data Analysis)](#cleaning-and-eda)
+    - [Data Cleaning](#data-cleaning)
+    - [Univariate Analysis](#univariate-analysis)
+    - [Bivariate Analysis](#bivariate-analysis)
+    - [Interesting Aggregates](#interesting-aggregates)
+- [Framing the Problem](#framing-the-problem-problem-identification)
+- [Baseline Model](#baseline-model)
+- [Final Model](#final-model)
+- [Fairness Analysis](#fairness-analysis)
+
 
 ## Introduction
 Welcome to Summoner’s Rift! [League of Legends (LoL)](https://en.wikipedia.org/wiki/League_of_Legends) is a popular online multiplayer battle arena game, with millions of active players worldwide. The game's massive player base makes it an excellent source of data for researchers and data scientists interested in exploring various aspects of the game, from player behavior to gameplay mechanics. 
@@ -39,19 +55,6 @@ The dataset has a total of 149,232 rows and 123 columns. We cleaned the dataset 
 | *bot*                      | bottom      |
 | *sup*                      | support     |
 
-
-## Table of Contents
-- [Introduction](#introduction)
-    - [Dataset Statistics and Definitions](#dataset-statistics-and-definitions)
-- [Cleaning and EDA (Exploratory Data Analysis)](#cleaning-and-eda)
-    - [Data Cleaning](#data-cleaning)
-    - [Univariate Analysis](#univariate-analysis)
-    - [Bivariate Analysis](#bivariate-analysis)
-    - [Interesting Aggregates](#interesting-aggregates)
-- [Framing the Problem](#framing-the-problem-problem-identification)
-- [Baseline Model](#baseline-model)
-- [Final Model](#final-model)
-- [Fairness Analysis](#fairness-analysis)
 
 ## Cleaning and EDA (Exploratory Data Analysis) 
 
