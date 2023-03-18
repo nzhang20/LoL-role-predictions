@@ -1,6 +1,6 @@
 
-# LoL-role-predictions
-A project for DSC80 at UCSD predicting the role of League of Legends players based on their statistics.
+# The Summoner's Oracle: Predicting League of Legends Player Positions
+A project for DSC80 at UCSD predicting the role of League of Legends players based on their in-game statistics.
 
 Contributors: [Charisse Hao](https://www.linkedin.com/in/charisse-hao/) and [Nicole Zhang](https://www.linkedin.com/in/nicole-zhang-31a09122b/)
 
