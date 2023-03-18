@@ -59,11 +59,11 @@ As we are basing this prediction model off of similar data used in a previous [p
 ## Framing the Problem: Problem Identification
 **Prediction problem:** Can we predict a player’s role based on their in-game statistics?
 
-This prediction problem requires building a multiclass classification model to classify players into one of five positions: middle, top, bottom, jungle, or support. In our case, `position` acts as the response variable as it is an essential variable in team composition and game strategy.
+This prediction problem requires building a multiclass classification model to classify players into one of five positions: middle, top, bottom, jungle, or support. In our case, `position` acted as the response variable as it is an essential variable in team composition and game strategy.
 
 In a previous project, we explored the relationship between `position` and other variables such as `kills`, `assists`, `deaths`, `damagetochampions`, `totalgold`, etc. Since we found there is some indication of correlation between these variables and `position`, we were interested in exploring the possibility of using those variables to predict players’ positions.  
 
-To evaluate our model, we will use the precision metric. Precision helps to minimize the number of false positives, and by using this metric, it would help to ensure a higher accuracy when the model is producing predictions. 
+To evaluate our model, we used the precision metric. Precision helps to minimize the number of false positives, and by using this metric, it helped to ensure a higher accuracy when the model produced predictions. 
 
 At the "time of prediction," we would only have access to the in-game statistics of a player, which would be used to predict their position. We will train the model using only these features, making sure to exclude any information that would not be available at the "time of prediction."
 
@@ -72,7 +72,7 @@ At the "time of prediction," we would only have access to the in-game statistics
 ## Baseline Model
 For our baseline model, we used a random forest classifier to predict the position based on three features: KDA, total damage to champions, and total gold. All of these features are quantitative variables, and KDA is derived from the combination of kills, deaths, and assists. No additional transformations or encodings were performed on these variables.
 
-The performance of the model is reported as 0.4588, which shows that the model correctly predicts the position for 45.88% of the observations. This accuracy level is relatively low, and there is certainly room for improvement.
+The performance of the model is reported as 0.4599, which shows that the model correctly predicts the position for 45.99% of the observations. This accuracy level is relatively low, and there is certainly room for improvement.
 
 It is difficult to say definitively whether the current model is "good" or not without additional context. However, given that the model's accuracy is below 50%, it is safe to say that there is significant room for improvement. The model's performance can be improved by including additional relevant features or optimizing the parameters of the random forest classifier.
 
@@ -84,7 +84,7 @@ Kills, deaths, and assists were added on top of the KDA feature because they giv
 
 The final model used a random forest classifier. One of the main reasons we chose the random forest algorithm is that it can handle a large number of input features and still maintain good performance. In the case of predicting a player's position, we have several input features to consider (such as kills, deaths, assists, gold, etc.), and the random forest algorithm is well-suited to handle this type of data. The random forest algorithm also has the ability to detect complex relationships between the input features and the output variable, which can help improve the accuracy of the model. Additionally, random forests are less prone to overfitting than some other algorithms, which is important when working with complex data. Our hyperparameters were tuned using grid search. The best hyperparameters were found to be a criterion of 'entropy', a max depth of 15, and a minimum sample split of 2. These hyperparameters were found using grid search, which allowed for an exhaustive search over different combinations of hyperparameters.
 
-The final model achieved an accuracy of 0.7088, which is an improvement of approximately 20% over the baseline model. This suggests that the additional features and hyperparameter tuning were effective at improving the model's performance. Overall, the final model has a higher chance of correctly predicting a player's position based on the given data values.
+The final model achieved an accuracy of 0.7056, which is an improvement of approximately 20% over the baseline model. This suggests that the additional features and hyperparameter tuning were effective at improving the model's performance. Overall, the final model has a higher chance of correctly predicting a player's position based on the given data values.
 
 
 ## Fairness Analysis
@@ -94,7 +94,7 @@ Fairness analysis refers to the process of assessing whether a predictive model 
 
 **Alternative hypothesis:** Our model is unfair (biased). Its precision for teams on side blue is higher than its precision for teams on the red side. 
 
-For our fairness analysis, we choose to use precision as our evaluation metric, with the test statistic being the difference in the precision of red and blue predictions. Our significance level was set at 0.05, and after running 500 permutation tests, we got a p-value of 0.304. 
+For our fairness analysis, we choose to use precision as our evaluation metric, with the test statistic being the difference in the precision of red and blue predictions. Our significance level was set at 0.05, and after running 500 permutation tests, we got a p-value of 0.136. 
 
 <p style="text-align:center"><iframe src="assets/precision_diff.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
 
