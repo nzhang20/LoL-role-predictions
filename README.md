@@ -63,9 +63,9 @@ This prediction problem requires building a multiclass classification model to c
 
 In a previous project, we explored the relationship between `position` and other variables such as `kills`, `assists`, `deaths`, `damagetochampions`, `totalgold`, etc. Since we found there is some indication of correlation between these variables and `position`, we were interested in exploring the possibility of using those variables to predict players’ positions.  
 
-To evaluate our model, we used the precision metric. Precision helps to minimize the number of false positives, and by using this metric, it helped to ensure a higher accuracy when the model produced predictions. 
+To evaluate our model, we used the precision metric. Precision helps to minimize the number of false positives, and by using this metric, it helps to ensure a higher accuracy when the model produces predictions. 
 
-At the "time of prediction," we would only have access to the in-game statistics of a player, which would be used to predict their position. We will train the model using only these features, making sure to exclude any information that would not be available at the "time of prediction."
+At the "time of prediction," we would only have access to the in-game statistics of a player, which would be used to predict their position. We trained the model using only these features, making sure to exclude any information that would not be available at the "time of prediction."
 
 
 
