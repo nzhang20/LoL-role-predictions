@@ -96,4 +96,6 @@ Fairness analysis refers to the process of assessing whether a predictive model 
 
 For our fairness analysis, we choose to use precision as our evaluation metric, with the test statistic being the difference in the precision of red and blue predictions. Our significance level was set at 0.05, and after running 500 permutation tests, we got a p-value of 0.304. 
 
+<p style="text-align:center"><iframe src="assets/precision_diff.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
+
 In conclusion, based on the resulting p-value of 0.304 being greater than our significance level of 0.05, we fail to reject the null hypothesis. We do not have enough evidence to conclude that our model is unfair and its precision for teams on the blue side is higher than its precision for teams on the red side. Our conclusion seems to indicate our model is fair and that any observed differences in precision between the two groups are due to random chance.
